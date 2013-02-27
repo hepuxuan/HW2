@@ -30,11 +30,11 @@ class MoviesController < ApplicationController
     redirect_to movies_path(:ratings=>ratings,:sort=>sort)
   end
   if ratings
-  ratings.each do |rating|
+  ratings.each do |key,value|
     if first
-          where+='rating=\''+rating[0]+'\''
+          where+='rating=\''+key.to_s+'\''
           first=false
-        else where+=' or rating=\''+rating[0]+'\''
+        else where+=' or rating=\''+key.to_s+'\''
      end
   end
   end

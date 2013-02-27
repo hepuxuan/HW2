@@ -41,7 +41,6 @@ table#movies {
 }
 table#movies th.hilite {
   background-color: yellow;
-border: 10px solid white;
 }
 table#movies th {
   border: 2px solid white;
