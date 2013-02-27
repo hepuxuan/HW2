@@ -20,9 +20,11 @@ class MoviesController < ApplicationController
   end
   if params[:ratings] 
   ratings=params[:ratings]
+  @select_ratings=ratings
   session[:ratings]=ratings
   elsif session[:ratings]
   ratings=session[:ratings]
+  @select_ratings=ratings
   redirect=true
   end
   if redirect
